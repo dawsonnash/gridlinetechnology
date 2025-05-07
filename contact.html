@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Gridline Tech</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #f0f0f0;
+      --accent-color: #ff7b00;
+      --field-bg: #1e1e1e;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background-color: #1e1e1e;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--accent-color);
+    }
+
+    nav a {
+      color: var(--text-color);
+      margin-left: 24px;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--accent-color);
+      margin-bottom: 32px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    form > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+    label {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    input, select, textarea {
+      background-color: var(--field-bg);
+      color: var(--text-color);
+      border: 1px solid #333;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: var(--accent-color);
+      color: black;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e06e00;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Gridline Tech</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/firemanifestingapp/">Fire Manifesting App</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact / Support</h1>
+
+    <form
+  action="https://formspree.io/f/xanojozv"
+  method="POST"
+>
+      <div>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="Name" required />
+      </div>
+
+      <div>
+        <label for="org">Organization / Crew Name</label>
+        <input type="text" id="org" name="Organization" />
+      </div>
+
+      <div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="Phone" />
+      </div>
+
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="Email" required />
+      </div>
+
+      <div>
+        <label for="subject">Subject</label>
+        <select id="subject" name="Subject">
+          <option value="App Support">App Support</option>
+          <option value="Feedback">Feedback</option>
+          <option value="Bug Report">Bug Report</option>
+          <option value="Feature Request">Feature Request</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" placeholder="Write your message here..." required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </main>
+
+</body>
+</html>

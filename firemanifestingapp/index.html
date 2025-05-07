@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gridline Tech</title>
+  <title>Fire Manifesting App | Gridline Tech</title>
   <style>
     :root {
       --bg-color: #121212;
@@ -24,7 +24,6 @@
       line-height: 1.6;
     }
 
-    /* Header/Nav */
     header {
       display: flex;
       justify-content: space-between;
@@ -51,27 +50,26 @@
       color: var(--accent-color);
     }
 
-    /* Main content */
     main {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 80px 48px; /* slightly more padding */
-  max-width: 1400px;
-  margin: 0 auto;
-}
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 80px 48px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
 
     .image-carousel {
-  position: relative;
-  flex: 1;
-  max-width: 500px; /* increased from 400px */
-  min-width: 300px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      position: relative;
+      flex: 1;
+      max-width: 500px;
+      min-width: 300px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
 
     .carousel-images {
       width: 100%;
@@ -80,14 +78,14 @@
     }
 
     .carousel-slide {
-  width: 100%;
-  height: auto;
-  max-height: 600px; /* increased from default */
-  object-fit: cover;
-  display: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
+      width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: cover;
+      display: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
 
     .carousel-slide.active {
       display: block;
@@ -116,11 +114,11 @@
 
     .about-container h2 {
       color: var(--accent-color);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .about-container p {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
 
     @media (max-width: 768px) {
@@ -141,46 +139,36 @@
 <body>
 
   <header>
-    <div class="logo">Gridline Tech</div>
+    <div class="logo">Fire Manifesting App</div>
     <nav>
-      <a href="/firemanifestingapp/">Fire Manifesting</a>
-<a href="/contact.html">Contact Us</a>
+      <a href="/">Home</a>
+      <a href="/contact.html">Contact Us</a>
     </nav>
   </header>
 
   <main>
     <div class="image-carousel">
-      <img src="assets/image1.jpg" alt="Swan Lake Fire" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);" />
+      <img src="/assets/logo1.png" alt="Swan Lake Fire" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);" />
     </div>
-    
+  
     <div class="about-container">
-      <h2>About Us</h2>
+      <h2>App Overview</h2>
       <p>
-        Gridline Tech is a small team dedicated to solving real-world problems
-        with powerful, efficient tools. Our flagship software, the Fire Manifesting App,
-        streamlines logistics and reduces errors for wildland firefighting crews across Alaska.
+        The Fire Manifesting App is a fast, flexible manifest builder designed for wildland crews.
+        It calculates loadouts, manages crew and gear preferences, and generates manifests on the fly.
+        Built for Alaska’s remote firefighting operations, the app simplifies logistics and reduces error under pressure.
       </p>
+  
+      <!-- App Store badge inside about-container -->
+      <div style="margin-top: 24px;">
+        <a href="https://apps.apple.com/us/app/fire-manifesting-app/id6738597221?uo=2" target="_blank">
+          <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+               alt="Download on the App Store"
+               style="height: 60px;" />
+        </a>
+      </div>
     </div>
   </main>
-
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".carousel-slide");
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === index);
-      });
-    }
-
-    function changeSlide(direction) {
-      slideIndex = (slideIndex + direction + slides.length) % slides.length;
-      showSlide(slideIndex);
-    }
-
-    // Initialize
-    showSlide(slideIndex);
-  </script>
-
+  
 </body>
 </html>
