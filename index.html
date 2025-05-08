@@ -26,16 +26,21 @@
 
     /* Header/Nav */
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 32px;
-      background-color: #1e1e1e;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-image: url('assets/topo_background.png'); /* or wherever your image lives */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px; /* match your image height */
+  color: white;
+}
+
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       font-weight: bold;
       color: var(--accent-color);
     }
@@ -139,11 +144,10 @@
   </style>
 </head>
 <body>
-
   <header>
-    <div class="logo">Gridline Tech</div>
+    <div class="logo">Gridline Tech LLC</div>
     <nav>
-      <a href="/firemanifestingapp/">Fire Manifesting</a>
+      <a href="/software/">Software</a>
 <a href="/contact.html">Contact Us</a>
     </nav>
   </header>
@@ -156,9 +160,9 @@
     <div class="about-container">
       <h2>About Us</h2>
       <p>
-        Gridline Tech is a small team dedicated to solving real-world problems
-        with powerful, efficient tools. Our flagship software, the Fire Manifesting App,
-        streamlines logistics and reduces errors for wildland firefighting crews across Alaska.
+        Gridline Tech is a startup LLC based out of Palmer, Alaska, with an aim of building smart, field-ready software for the wildland fire community. 
+        Our flagship product — the Fire Manifesting App — helps wildland firefighting crews streamline helicopter 
+        load calculations and configurations, reduce logistical errors, and respond faster in high-paced, changing operational environments. 
       </p>
     </div>
   </main>

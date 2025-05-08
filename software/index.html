@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fire Manifesting App | Gridline Tech</title>
+  <title>Software | Gridline Tech</title>
   <style>
     :root {
       --bg-color: #121212;
@@ -24,17 +24,41 @@
       line-height: 1.6;
     }
 
+    footer.report-bar {
+  background-color: #1e1e1e;
+  color: var(--text-color);
+  padding: 24px 32px;
+  text-align: center;
+  font-size: 1rem;
+  border-top: 1px solid #333;
+}
+
+footer.report-bar a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+footer.report-bar a:hover {
+  text-decoration: none;
+  color: #ffaa3c;
+}
+
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 32px;
-      background-color: #1e1e1e;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-image: url('/assets/topo_background.png'); /* or wherever your image lives */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px; /* match your image height */
+  color: white;
+}
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       font-weight: bold;
       color: var(--accent-color);
     }
@@ -139,7 +163,7 @@
 <body>
 
   <header>
-    <div class="logo">Fire Manifesting App</div>
+    <div class="logo">Gridline Tech | Software</div>
     <nav>
       <a href="/">Home</a>
       <a href="/contact.html">Contact Us</a>
@@ -148,16 +172,20 @@
 
   <main>
     <div class="image-carousel">
-      <img src="/assets/logo1.png" alt="Swan Lake Fire" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);" />
+      <img src="/assets/logo_transparent.png" alt="Swan Lake Fire" style="width: 100%; border-radius: 8px;" />
     </div>
   
     <div class="about-container">
-      <h2>App Overview</h2>
+      <h2>Fire Manifesting App</h2>
       <p>
-        The Fire Manifesting App is a fast, flexible manifest builder designed for wildland crews.
-        It calculates loadouts, manages crew and gear preferences, and generates manifests on the fly.
-        Built for Alaska’s remote firefighting operations, the app simplifies logistics and reduces error under pressure.
+        The Fire Manifesting App is a fast, flexible tool for wildland firefighting crews to generate accurate helicopter load manifests. It was originally built for Alaska fire crews due to the remote nature of Alaska fire, but it supports any fire aviation personnel needing quick, reliable load planning.
+      
+        To reduce the time and errors of manual manifesting, the app automates weight calculations and load configurations. Users can enter crew, tool, and equipment weights, and apply preferences like including water on every load or distributing leadership evenly.
+      
+        At its core is a customizable algorithm tailored to each crew’s standard procedures. By combining automation with crew-specific control, the app minimizes stress, saves time, and enables faster response to last-minute operational changes.
       </p>
+      
+      
   
       <!-- App Store badge inside about-container -->
       <div style="margin-top: 24px;">
@@ -167,8 +195,16 @@
                style="height: 60px;" />
         </a>
       </div>
+      
+      
     </div>
   </main>
+  <footer class="report-bar">
+    <p>
+      For more information on how the app works under the hood, view the 
+      <a href="/assets/report.pdf" target="_blank">App Design and Implementation Report</a>.
+    </p>
+  </footer>
   
 </body>
 </html>

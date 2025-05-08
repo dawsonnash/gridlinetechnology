@@ -25,16 +25,20 @@
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 32px;
-      background-color: #1e1e1e;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-image: url('/assets/topo_background.png'); /* or wherever your image lives */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100px; /* match your image height */
+  color: white;
+}
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       font-weight: bold;
       color: var(--accent-color);
     }
@@ -114,10 +118,10 @@
 <body>
 
   <header>
-    <div class="logo">Gridline Tech</div>
+    <div class="logo">Gridline Tech | Contact Form</div>
     <nav>
       <a href="/">Home</a>
-      <a href="/firemanifestingapp/">Fire Manifesting App</a>
+      <a href="/software/">Software</a>
     </nav>
   </header>
 
