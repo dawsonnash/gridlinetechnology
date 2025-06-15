@@ -61,17 +61,23 @@ footer.report-bar a:hover {
   font-weight: bold;
   color: var(--accent-color);
 }
+nav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 
-    nav a {
-      color: var(--text-color);
-      margin-left: 24px;
-      text-decoration: none;
-      font-size: 1rem;
-    }
+nav a {
+  color: var(--text-color);
+  margin-left: 24px;
+  text-decoration: none;
+  font-size: 1rem;
+}
 
-    nav a:hover {
-      color: var(--accent-color);
-    }
+nav a:hover {
+  color: var(--accent-color);
+}
+
 
 main {
   display: flex;
@@ -147,26 +153,30 @@ main {
       padding: 16px;
       max-width: 700px;
     }
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
 
-    @media (max-width: 768px) {
-      main {
-        flex-direction: column;
-      }
+  nav {
+    text-align: right;
+  }
 
-      nav {
-        text-align: right;
-      }
+  .image-carousel {
+    margin-bottom: 24px;
+  }
 
-      .image-carousel {
-        margin-bottom: 24px;
-      }
-    }
+  .about-container {
+    max-width: 100%;
+  }
+}
+
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">Gridline Tech | Software</div>
+<div class="logo">Software</div>
     <nav>
       <a href="/">Home</a>
       <a href="/contact.html">Contact Us</a>

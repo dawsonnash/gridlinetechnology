@@ -45,16 +45,23 @@
   color: var(--accent-color);
 }
 
-    nav a {
-      color: var(--text-color);
-      margin-left: 24px;
-      text-decoration: none;
-      font-size: 1rem;
-    }
+  nav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 
-    nav a:hover {
-      color: var(--accent-color);
-    }
+nav a {
+  color: var(--text-color);
+  margin-left: 24px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
 
     /* Main content */
 main {
@@ -142,7 +149,7 @@ main {
 </head>
 <body>
   <header>
-    <div class="logo">Gridline Tech LLC</div>
+    <div class="logo">Gridline Tech</div>
     <nav>
       <a href="/software/">Software</a>
 <a href="/contact.html">Contact Us</a>
