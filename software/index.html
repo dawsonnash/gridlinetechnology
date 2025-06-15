@@ -150,6 +150,16 @@ main {
       margin-bottom: 12px;
     }
 
+    .badge-container {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* <-- allows wrapping if needed */
+  gap: 16px; /* optional: gives nice spacing between badges */
+}
+
     .about-container {
       flex: 1 1 50%;
       padding: 16px;
@@ -201,9 +211,8 @@ main {
       </p>
       
       
-<div style="margin-top: 24px; display: flex; flex-direction: row; align-items: center;">
-  <!-- App Store Badge -->
-  <div style="height: 90px; display: flex; align-items: center; margin-right: 16px;">
+<div class="badge-container">
+  <div style="height: 90px; display: flex; align-items: center;">
     <a href="https://apps.apple.com/us/app/fire-manifesting-app/id6738597221?uo=2" target="_blank">
       <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
            alt="Download on the App Store"
@@ -211,7 +220,6 @@ main {
     </a>
   </div>
 
-  <!-- Google Play Badge -->
   <div style="height: 90px; display: flex; align-items: center;">
     <a href="https://play.google.com/store/apps/details?id=com.dawsonnash.firemanifest&hl=en_US" target="_blank">
       <img alt="Get it on Google Play" 
@@ -220,6 +228,7 @@ main {
     </a>
   </div>
 </div>
+
 
       
       
