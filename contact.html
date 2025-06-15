@@ -36,13 +36,11 @@
   height: 100px; /* match your image height */
   color: white;
 }
-
-    .logo {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: var(--accent-color);
-    }
-
+   .logo {
+  font-size: clamp(1.1rem, 6vw, 2.5rem);
+  font-weight: bold;
+  color: var(--accent-color);
+}
     nav a {
       color: var(--text-color);
       margin-left: 24px;
@@ -163,14 +161,42 @@
         </select>
       </div>
 
-      <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="Message" placeholder="Write your message here..." required></textarea>
-      </div>
+    <div>
+  <label for="message">Message</label>
+  <textarea id="message" name="Message" placeholder="Write your message here..." maxlength="1000" required></textarea>
+  <div id="charCount" style="font-size: 0.9rem; margin-top: 4px; color: #aaa;">1000 characters remaining</div>
+</div>
+
 
       <button type="submit">Send Message</button>
     </form>
   </main>
 
 </body>
+<script>
+  document.querySelector('form').addEventListener('submit', function (e) {
+    // Small delay to allow Formspree to process first
+    setTimeout(() => {
+      e.target.reset();
+    }, 100);
+  });
+</script>
+<script>
+  const messageBox = document.getElementById('message');
+  const charCount = document.getElementById('charCount');
+
+  messageBox.addEventListener('input', () => {
+    const remaining = 1000 - messageBox.value.length;
+    charCount.textContent = `${remaining} characters remaining`;
+  });
+
+  // Auto-clear form after submission
+  document.querySelector('form').addEventListener('submit', function (e) {
+    setTimeout(() => {
+      e.target.reset();
+      charCount.textContent = `1000 characters remaining`;
+    }, 100);
+  });
+</script>
+
 </html>

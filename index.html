@@ -34,16 +34,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100px; /* match your image height */
+  height: 100px; 
   color: white;
 }
 
 
-    .logo {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: var(--accent-color);
-    }
+   .logo {
+  font-size: clamp(1.1rem, 6vw, 2.5rem);
+  font-weight: bold;
+  color: var(--accent-color);
+}
 
     nav a {
       color: var(--text-color);
@@ -57,21 +57,19 @@
     }
 
     /* Main content */
-    main {
+main {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 80px 48px; /* slightly more padding */
+  align-items: flex-start;  /* align vertically to top */
+  justify-content: center;  /* center horizontally */
+  padding: 80px 48px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-    .image-carousel {
-  position: relative;
-  flex: 1;
-  max-width: 500px; /* increased from 400px */
-  min-width: 300px;
+
+.image-carousel {
+  flex: 1 1 50%;
   padding: 16px;
   display: flex;
   align-items: center;
@@ -112,12 +110,11 @@
       color: var(--accent-color);
     }
 
-    .about-container {
-      flex: 1;
-      min-width: 300px;
-      max-width: 500px;
-      padding: 16px;
-    }
+.about-container {
+  flex: 1 1 50%;
+  padding: 16px;
+  max-width: 700px;
+}
 
     .about-container h2 {
       color: var(--accent-color);
@@ -125,7 +122,7 @@
     }
 
     .about-container p {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
 
     @media (max-width: 768px) {
@@ -153,11 +150,7 @@
   </header>
 
   <main>
-    <div class="image-carousel">
-      <img src="assets/image1.jpg" alt="Swan Lake Fire" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);" />
-    </div>
-    
-    <div class="about-container">
+        <div class="about-container">
       <h2>About Us</h2>
       <p>
         Gridline Tech is a startup LLC based out of Palmer, Alaska, with an aim of building smart, field-ready software for the wildland fire community. 
@@ -165,6 +158,12 @@
         load calculations and configurations, reduce logistical errors, and respond faster in high-paced, changing operational environments. 
       </p>
     </div>
+    
+    <div class="image-carousel">
+      <img src="assets/image1.jpg" alt="Swan Lake Fire" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);" />
+    </div>
+    
+
   </main>
 
   <script>

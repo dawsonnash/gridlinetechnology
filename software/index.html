@@ -56,12 +56,11 @@ footer.report-bar a:hover {
   height: 100px; /* match your image height */
   color: white;
 }
-
-    .logo {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: var(--accent-color);
-    }
+.logo {
+  font-size: clamp(1.1rem, 6vw, 2.5rem);
+  font-weight: bold;
+  color: var(--accent-color);
+}
 
     nav a {
       color: var(--text-color);
@@ -74,15 +73,16 @@ footer.report-bar a:hover {
       color: var(--accent-color);
     }
 
-    main {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 80px 48px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;  /* align vertically to top */
+  justify-content: center;  /* center horizontally */
+  padding: 80px 48px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 
     .image-carousel {
       position: relative;
@@ -128,21 +128,24 @@ footer.report-bar a:hover {
     .image-carousel button:hover {
       color: var(--accent-color);
     }
-
-    .about-container {
-      flex: 1;
-      min-width: 300px;
-      max-width: 500px;
+    .image-carousel {
+      flex: 1 1 50%;
       padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
 
     .about-container h2 {
       color: var(--accent-color);
       margin-bottom: 12px;
     }
 
-    .about-container p {
-      font-size: 1.1rem;
+    .about-container {
+      flex: 1 1 50%;
+      padding: 16px;
+      max-width: 700px;
     }
 
     @media (max-width: 768px) {
@@ -186,15 +189,26 @@ footer.report-bar a:hover {
       </p>
       
       
-  
-      <!-- App Store badge inside about-container -->
-      <div style="margin-top: 24px;">
-        <a href="https://apps.apple.com/us/app/fire-manifesting-app/id6738597221?uo=2" target="_blank">
-          <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
-               alt="Download on the App Store"
-               style="height: 60px;" />
-        </a>
-      </div>
+<div style="margin-top: 24px; display: flex; flex-direction: row; align-items: center;">
+  <!-- App Store Badge -->
+  <div style="height: 90px; display: flex; align-items: center; margin-right: 16px;">
+    <a href="https://apps.apple.com/us/app/fire-manifesting-app/id6738597221?uo=2" target="_blank">
+      <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+           alt="Download on the App Store"
+           style="height: 60px;" />
+    </a>
+  </div>
+
+  <!-- Google Play Badge -->
+  <div style="height: 90px; display: flex; align-items: center;">
+    <a href="https://play.google.com/store/apps/details?id=com.dawsonnash.firemanifest&hl=en_US" target="_blank">
+      <img alt="Get it on Google Play" 
+           src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+           style="height: 90px;" />
+    </a>
+  </div>
+</div>
+
       
       
     </div>
@@ -202,7 +216,7 @@ footer.report-bar a:hover {
   <footer class="report-bar">
     <p>
       For more information on how the app works under the hood, view the 
-      <a href="/assets/report.pdf" target="_blank">App Design and Implementation Report</a>.
+      <a href="/assets/fire_manifesting_app_report.pdf" target="_blank">App Design and Implementation Report</a>.
     </p>
   </footer>
   
